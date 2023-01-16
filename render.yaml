@@ -1,18 +1,18 @@
 databases:
-  - name: dog_cat
+  - name: ds_vendas
     databaseName: ds_vendas
     user: admin
 
 services:
   - type: web
-    name: dog_cat
+    name: adote
     env: python
     buildCommand: "./build.sh"
-    startCommand: "gunicorn mysite.wsgi:application"
+    startCommand: "gunicorn adote.wsgi:application"
     envVars:
       - key: postgres://admin:JskMH1Mgrv9ubLQyn92uGO8FmLIGIuC9@dpg-cetcmfpa6gdut0opk240-a/ds_vendas
         fromDatabase:
-          name: ds_vendas
+          name: adote
           property: connectionString
       - key: SECRET_KEY
         generateValue: true
