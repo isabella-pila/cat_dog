@@ -81,11 +81,22 @@ WSGI_APPLICATION = 'adote.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': BASE_DIR / 'db.sqlite3',
+#    }
+#}
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+   'default': {
+       'ENGINE': 'django.db.backends.postgresql',
+       'NAME': 'ds_vendas',
+       'USER': 'admin',
+       'PASSWORD': 'JskMH1Mgrv9ubLQyn92uGO8FmLIGIuC9',
+       'HOST': 'dpg-cetcmfpa6gdut0opk240-a.oregon-postgres.render.com',
+       'PORT': '5432',
+   }
 }
 
 
